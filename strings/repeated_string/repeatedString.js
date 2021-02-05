@@ -18,9 +18,9 @@ function repeatedString(s, n) {
 
 // this would look a lot prettier by splitting 's' and 'sliced' then filtering to get the counts, 
 // for example this one-liner:
-function repeatedString(s, n) {
+const repeatedString2 = (s, n) => {
   return s.split('').filter(l => l === 'a').length
-   * Math.floor(n / s.length)
-   +  s.slice(0, n % s.length) .split('').filter(l => l === 'a').length;
+    * Math.floor(n / s.length)
+    + s.slice(0, n % s.length).split('').filter(l => l === 'a').length;
 }
 // but the first method is more efficient and more legible
