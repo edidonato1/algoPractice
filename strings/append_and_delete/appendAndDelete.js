@@ -10,13 +10,13 @@ const appendAndDelete = (s, t, k) => {
         // if character doesn't match, must delete rest of string starting at character i.
         // this requires an operation at each character starting at the end of the string
         count += s.length - i;
-          s = s.slice(0, i)
+        s = s.slice(0, i)
       }
   }
   for (let i = 0; i < t.length; i++) {
       if (s[i] !== t[i]) {
-          s += t[i]; // append operation to make the strings match
-          count += 1;
+        s += t[i]; // append operation to make the strings match
+        count += 1;
       }
   }
   let diff = k - count; // amount of moves left
